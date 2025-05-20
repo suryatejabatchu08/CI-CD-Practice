@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Demo Website</title>
+    <style
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    }
+    header {
+        background: #333;
+        color: white;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    nav ul li {
+        display: inline;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: color 0.3s ease-in-out;
+    }
+    nav ul li a:hover {
+        color: #ff9800;
+    }
+    main {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+        background: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    #home h1 {
+        text-align: center;
+        color: #444;
+    }
+    #home p {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+    #about img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 1rem auto;
+        border-radius: 10px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+    }
+    table, th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    th {
+        background-color: #333;
+        color: white;
+    }
+    form {
+        display: grid;
+        gap: 15px;
+        background: #fff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    input, select, textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+    }
+    button {
+        background: #ff9800;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: background 0.3s ease-in-out;
+    }
+    button:hover {
+        background: #e68900;
+    }
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background: #333;
+        color: white;
+        margin-top: 2rem;
+    }
+    @media (max-width: 768px) {
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        main {
+            padding: 1rem;
+        }
+    
+        form {
+            padding: 1rem;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Welcome to My Website</h1>
+            <p>This is a demonstration of various <strong>HTML</strong> and <em>CSS</em> features.</p>
+            <h2>Text Formatting Examples</h2>
+            <p><b>Bold text</b></p>
+            <p><i>Italic text</i></p>
+            <p><u>Underlined text</u></p>
+            <p><mark>Highlighted text</mark></p>
+            <p>Subscript: H<sub>2</sub>O</p>
+            <p>Superscript: 10<sup>2</sup></p>
+        </section>
+        <section id="about">
+            <h2>About Us</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRh--jVCN1FxGv7tkgtHWAmOgyprBghmyppSQ&s" alt="Placeholder Image">
+            <h3>Our Services</h3>
+            <ul>
+                <li>Web Development</li>
+                <li>Design Services</li>
+                <li>Consulting</li>
+            </ul>
+            <h3>Experience Levels</h3>
+            <ol>
+                <li>Beginner</li>
+                <li>Intermediate</li>
+                <li>Advanced</li>
+            </ol>
+            <table>
+                <caption>Price List</caption>
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                        <th>Duration</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Basic Package</td>
+                        <td>$499</td>
+                        <td>1 month</td>
+                    </tr>
+                    <tr>
+                        <td>Premium Package</td>
+                        <td>$999</td>
+                        <td>2 months</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="/submit" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="billing">Billing Question</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Preferred Contact Method:</label>
+                    <input type="radio" id="email-pref" name="contact-pref" value="email">
+                    <label for="email-pref">Email</label>
+                    <input type="radio" id="phone-pref" name="contact-pref" value="phone">
+                    <label for="phone-pref">Phone</label>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Demo Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
